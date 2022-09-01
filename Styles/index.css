@@ -275,4 +275,7 @@ ol li a {
     height: 1.2px;
     width: 100%;
   }
+  .text h2 {
+    font-size: 1.5rem;
+  }
 }

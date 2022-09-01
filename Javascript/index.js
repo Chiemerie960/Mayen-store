@@ -22,10 +22,4 @@ const btn = document.querySelector(".hamburger");
 const doc = document.querySelector('body')
 btn.addEventListener("click", () => {
   navigation.classList.toggle("active");
-  if(navigation.classList.contains('active')){
-    console.log('i')
-  }
-  else{
-    doc.removeAttribute("style", "overflow: hidden;");
-  }
 });

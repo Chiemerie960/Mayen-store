@@ -60,6 +60,9 @@ nav h3 {
   font-size: 0.8rem;
   color: white;
 }
+.hamburger {
+  display: none;
+}
 /***************************
  *    Landing carousel     *
  ***************************/
@@ -202,5 +205,74 @@ ol li a {
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 700px) {
+  nav {
+    border: none;
+    background: var(--bgcolor);
+    height: 10vh;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  h3.logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #ffffff;
+    z-index: 1;
+    font-size: 1.3rem;
+    width: fit-content;
+  }
+
+  .navlinks {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    background-color: var(--color);
+    height: 100vh;
+    padding: 0;
+    transform: translateY(-100%);
+    transition: all 1s ease;
+  }
+
+  /* Make Nav slide down when clicked */
+  .active {
+    transform: translateY(0);
+  }
+
+  .navlinks a {
+    color: white;
+  }
+
+  .hamburger {
+    width: 2rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .hamburger span {
+    background-color: rgb(255, 255, 255);
+    height: 1.2px;
+    width: 100%;
   }
 }

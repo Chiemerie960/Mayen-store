@@ -17,3 +17,15 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 5000); // Change image every 5 seconds
 }
+const navigation = document.querySelector(".navlinks");
+const btn = document.querySelector(".hamburger");
+const doc = document.querySelector('body')
+btn.addEventListener("click", () => {
+  navigation.classList.toggle("active");
+  if(navigation.classList.contains('active')){
+    console.log('i')
+  }
+  else{
+    doc.removeAttribute("style", "overflow: hidden;");
+  }
+});

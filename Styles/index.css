@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Overpass:wght@400;700&family=Red+Hat+Display:wght@300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+:root {
+  --color: rgb(75, 65, 161);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", "Outfit", "Overpass", "Inter", "Roboto",
+    sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/****************************
+*      Navigation style     *
+*****************************/
+header {
+  height: fit-content;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 5rem;
+  position: absolute;
+  z-index: 10;
+  color: white;
+}
+/* Navigaltion logo/ brand */
+nav h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  font-variant: small-caps;
+  cursor: pointer;
+}
+/* Nav links */
+.navlinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navlinks a {
+  font-size: 0.8rem;
+  color: white;
+}
+/***************************
+ *    Landing carousel     *
+ ***************************/
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.mySlides {
+  display: none;
+}
+.mySlides img {
+  width: 100%;
+  height: inherit;
+  max-height: 100vh;
+  object-position: center;
+  object-fit: cover;
+}
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  /* border: 1px solid white; */
+  padding: 2rem 0rem;
+}
+.text h2 {
+  font-size: 3rem;
+  font-variant: small-caps;
+  opacity: 0.8;
+}
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/*********************************
+*      Body infinite slider      * 
+**********************************/
+
+.slider {
+  display: flex;
+  width: 200%;
+  /* background: rgb(91, 93, 110); */
+  animation: bannermove 20s linear infinite;
+  padding: 1.5rem;
+}
+
+.slider-container {
+  width: 100%;
+}
+
+.slider-imgs {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  gap: 1.5rem;
+}
+.slider-imgs img {
+  display: block;
+  /* width: 110%; */
+  height: 150px;
+  border-radius: 1rem;
+  object-fit: cover;
+  object-position: top;
+}
+
+.cardhr {
+  padding: 3rem 4rem;
+}
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: .5rem;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  max-width: 100%;
+  gap: .5rem;
+}
+.grid-container .card img{
+  width: max-content;
+  max-width: 250px;
+  object-fit: cover;
+  object-position: top;
+}
+/* footer */
+footer {
+  display: flex;
+  background-color: var(--color);
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 4rem;
+}
+
+footer ol {
+  display: flex;
+  gap: 1rem;
+
+}
+
+ol li {
+  font-variant: small-caps;
+  color: #ffffff;
+}
+
+ol li a {
+  color: #ffffff;
+  font-variant: normal;
+}
+/***************************************
+*     Animations and media queries     *
+****************************************/
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+@keyframes bannermove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

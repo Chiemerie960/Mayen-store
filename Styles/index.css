@@ -278,4 +278,10 @@ ol li a {
   .text h2 {
     font-size: 1.5rem;
   }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    max-width: 100%;
+    gap: .5rem;
+  }
 }

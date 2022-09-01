@@ -154,7 +154,6 @@ nav h3 {
   gap: .5rem;
 }
 .grid-container .card img{
-  width: max-content;
   max-width: 250px;
   object-fit: cover;
   object-position: top;
@@ -283,5 +282,11 @@ ol li a {
     grid-template-columns: auto auto;
     max-width: 100%;
     gap: .5rem;
+  }
+  .grid-container .card img{
+    max-width: 200px;
+  }
+  .cardhr {
+    padding: 3rem 1rem;
   }
 }

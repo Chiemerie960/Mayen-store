@@ -298,12 +298,4 @@ ol li a {
     justify-content: center;
     align-items: center;
   }
-  .grid-container .card{
-    width: 90vw;
-  }
-  .grid-container .card img{
-    width: 100%;
-    object-fit: cover;
-    object-position: top;
-  }
 }
